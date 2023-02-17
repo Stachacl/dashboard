@@ -1,5 +1,8 @@
-const ctx = document.getElementById('analyticsChart').getContext("2d");
 
+$(document).ready(function() {
+
+
+const ctx = document.getElementById('analyticsChart').getContext('2d');
 
 
 // Define chart data
@@ -17,18 +20,16 @@ const chartData = {
   // Get chart canvas
   const chartCanvas = document.getElementById('analyticsChart');
   
-  // Create chart
-  const chart = new Chart(chartCanvas, {
+  //Configs 
+  const config = {
     type: 'line',
     data: chartData,
     options: {
       responsive: true,
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
-          }
-        }]
-      }
     }
-  });
+  }
+
+  // Create chart
+  const myChart = new Chart(ctx, config);
+
+})
