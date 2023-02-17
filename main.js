@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-
+  // Get chart canvas
 const ctx = document.getElementById('analyticsChart').getContext('2d');
 
 //Gradient Fill
@@ -10,7 +10,7 @@ gradient.addColorStop(0, 'rgba(54, 162, 235, 0.9)');
 gradient.addColorStop(1, 'rgba(255, 162, 207, 0.05)');
 
 
-// Define chart data
+// Define Analitics chart data
 const chartData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{
@@ -22,9 +22,6 @@ const chartData = {
       fill: true,
     }]
   };
-  
-  // Get chart canvas
-  const chartCanvas = document.getElementById('analyticsChart');
   
   //Configs 
   const config = {
@@ -47,6 +44,36 @@ const chartData = {
   }
 
   // Create chart
-  const myChart = new Chart(ctx, config);
+  const analyticsChart = new Chart(ctx, config);
 
 })
+
+
+///////////////////
+
+ // Get chart canvas for second chart
+ const ctx2 = document.getElementById('homeChartOne').getContext('2d');
+
+ // Configs for second chart
+ const config2 = {
+   type: 'line',
+   data: chartData,
+   options: {
+     responsive: true,
+     hitRadius: 20,
+     hoverRadius: 10,
+     scales: {
+       y: {
+           ticks: {
+               callback: function(value){
+                   return 'AUD ' + value + "m"
+               }
+           }
+       }
+     }
+   }
+ }
+
+ // Create second chart
+ const secondChart = new Chart(ctx2, config2);
+

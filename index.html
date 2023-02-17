@@ -3,10 +3,17 @@
   <head>
     <title>Dashboard</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -34,33 +41,30 @@
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">
-              Card 1
+              Chart 1
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a basic card.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              Card 2
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is another card.</p>
+            <div class="container">
+              <canvas id="homeChartOne"></canvas>
             </div>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
             <div class="card-header">
-              Card 3
+              Chart 2
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a third card.</p>
+            <div class="container">
+              <canvas id="homeChartTwo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              Chart 3
+            </div>
+            <div class="container">
+              <canvas id="homeChartThree"></canvas>
             </div>
           </div>
         </div>
