@@ -32,6 +32,8 @@ const chartData = {
     data: chartData,
     options: {
       responsive: true,
+      hitRadius: 20,
+      hoverRadius: 10,
       scales: {
         y: {
             ticks: {
