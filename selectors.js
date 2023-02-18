@@ -1,9 +1,10 @@
-
-
-
 //Query course
 
-$("document").ready(function () {
+$(function () {
+
+//Hover over the intro
+    // $(".textCopy").hover(highlightCopy)
+
 
 //Click to see and hide intro: 
 
@@ -12,7 +13,6 @@ $("document").ready(function () {
     $("#hideButton").show();
     $("#showButton").hide();
   });
-
 
   $("#hideButton").on("click", function(){
     $("#intro").hide();

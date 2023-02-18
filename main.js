@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(function() {
 
 
 /////////** Home Chart Three**//////////
