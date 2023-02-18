@@ -8,10 +8,16 @@ $("document").ready(function () {
 //Click to see and hide intro: 
 
   $("#show").on("click", function(){
-    $("intro").show();
+    $("#intro").show();
+    $("#hide").show();
+    $("#show").hide();
   });
+
+
   $("#hide").on("click", function(){
-    $("intro").hide();
+    $("#intro").hide();
+    $("#hide").hide();
+    $("#show").show();
   });
 
 //Click on Contact Us div: 
