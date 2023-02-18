@@ -1,6 +1,20 @@
+
+
+
 //Query course
 
 $("document").ready(function () {
+
+//Click to see and hide intro: 
+
+  $("#show").on("click", function(){
+    $("intro").show();
+  });
+  $("#hide").on("click", function(){
+    $("intro").hide();
+  });
+
+//Click on Contact Us div: 
 
   $("#clickBox").on("click", whenMouseIsClicked);
   $("#clickBox").on("mouseleave", whenMouseLeaves);
@@ -14,6 +28,8 @@ $("document").ready(function () {
     $("#clickBox").html("<h5> See you soon! </h5>");
     
   }
+
+
 
   //   $("body").append('<div class="px-3"> <h4> Contact us now! </h4> </div>');
 
