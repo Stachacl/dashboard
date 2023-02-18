@@ -2,10 +2,18 @@
 <html>
   <head>
     <title>Reports</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- Chart.js CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.css">
+       <!-- Bootstrap CSS -->
+       <link
+       rel="stylesheet"
+       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+     />
+     <!-- Chart JS -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <!-- Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <script src="reports.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,7 +45,9 @@
               Report 1
             </div>
             <div class="card-body">
-              <canvas id="report1"></canvas>
+                <div class="container">
+                    <canvas id="report1"></canvas>
+                  </div>
             </div>
           </div>
         </div>
