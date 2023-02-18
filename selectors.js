@@ -7,17 +7,17 @@ $("document").ready(function () {
 
 //Click to see and hide intro: 
 
-  $("#show").on("click", function(){
+  $("#showButton").on("click", function(){
     $("#intro").show();
-    $("#hide").show();
-    $("#show").hide();
+    $("#hideButton").show();
+    $("#showButton").hide();
   });
 
 
-  $("#hide").on("click", function(){
+  $("#hideButton").on("click", function(){
     $("#intro").hide();
-    $("#hide").hide();
-    $("#show").show();
+    $("#hideButton").hide();
+    $("#showButton").show();
   });
 
 //Click on Contact Us div: 
