@@ -1,7 +1,6 @@
 
 $(function() {
 
-
 /////////** Home Chart Three**//////////
 
 const ctx = document.getElementById('homeChartThree');

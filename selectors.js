@@ -3,7 +3,10 @@
 $(function () {
 
 //Hover over the intro
-    // $(".textCopy").hover(highlightCopy)
+    $("p").hover(highlightCopy);
+    function highlightCopy() {
+        $(this).toggleClass("bg-info")
+    }
 
 
 //Click to see and hide intro: 
