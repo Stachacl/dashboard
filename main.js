@@ -24,13 +24,6 @@ $(function () {
     },
   });
 
-// contacxt button function on click 
-$("#contactBtn").click(function () {
-  //redirect to contact.html page
-  window.location.href = "contact.html";
-
-});
-
 
   //below is a closing tag for $(document).ready(function() {
 });

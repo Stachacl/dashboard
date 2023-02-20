@@ -38,6 +38,12 @@ $(function () {
     
   }
 
+  // contacxt button function on click 
+  $("#contactBtn").click(function () {
+    //redirect to contact.html page
+    window.location.href = "contact.html";
+
+  });
 
 
   //   $("body").append('<div class="px-3"> <h4> Contact us now! </h4> </div>');
