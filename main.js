@@ -24,12 +24,16 @@ $(function () {
     },
   });
 
+// contacxt button function on click 
+$("#contactBtn").click(function () {
+  //redirect to contact.html page
+  window.location.href = "contact.html";
+
+});
+
+
   //below is a closing tag for $(document).ready(function() {
 });
 
-//contact button redirecting to conmtact page on click:
 
-let contactBtn = document.getElementById("contactBtn");
-contactBtn.addEventListener("click", function () {
-  window.location.href = "contact.html";
-});
+
