@@ -15,7 +15,7 @@ $(document).ready(function() {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
         datasets: [{
           label: 'Revenue',
-          data: [1500, 2000, 1800, 2200, 2800, 3200, 2900, 2500, 3400, 3600, 3800, 4000],
+          data: [1500, 2000, 1800, 2500, 2000, 3200, 2900, 2500, 3400, 3600, 3800, 4000],
           backgroundColor: gradient,
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1,
