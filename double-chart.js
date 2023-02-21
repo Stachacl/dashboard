@@ -8,8 +8,8 @@ var myDoubleChart = new Chart(ctx, {
     labels: ["A", "B", "C", "D", "E", "F", "J"],
     datasets: [
       {
-        label: "First dataset",
-        data: [65, 59, 80, 81, 56, 55, 40],
+        label: "Pink dataset",
+        data: [65, 59, 100, 81, 56, 55, 40],
         backgroundColor: "rgba(105, 0, 132, 0.2)",
         borderColor: "rgba(105, 0, 132, 0.9)",
         fill: true,
@@ -17,8 +17,8 @@ var myDoubleChart = new Chart(ctx, {
         lineTension: 0.3,     
       },
       {
-        label: "Second dataset",
-        data: [28, 48, 40, 19, 86, 27, 90],
+        label: "Blue dataset",
+        data: [28, 48, 40, 19, 120, 27, 90],
         backgroundColor: "rgba(54, 162, 235, 0.2)",
         borderColor: "rgba(54, 162, 235, 0.9)",
         fill: true,
@@ -29,6 +29,7 @@ var myDoubleChart = new Chart(ctx, {
   },
   options: {
     responsive: true,
+    // aspectRatio: 3/4,
   },
 });
 }); 

@@ -29,6 +29,7 @@ $(document).ready(function() {
         data: chartData,
         options: {
           responsive: true,
+          // aspectRatio: 3/4,
           hitRadius: 20,
           hoverRadius: 10,
           scales: {

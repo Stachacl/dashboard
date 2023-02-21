@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2023.1.117/styles/kendo.default-main.min.css">
+    <script src="https://kendo.cdn.telerik.com/2023.1.117/js/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.1.117/js/kendo.all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="formKendo.css" />     -->
+  </head>
+  <body>
+    <div class="stacha-container">
+      <div id="example">
+        <div class="demo-section">
+          <div id="validation-success"></div>
+
+          <form id="exampleform"></form>
+        </div>
+
+        <script>
+          $(document).ready(function () {
+            var validationSuccess = $("#validation-success");
+
+            $("#exampleform").kendoForm({
+              orientation: "vertical",
+              formData: {
+                Username: "johny",
+                Email: "john.doe@email.com",
+                Password: "pass123",
+                Birth: new Date(),
+                Agree: false,
+              },
+              items: [
+                {
+                  type: "group",
+                  label: "Registration Form",
+                  items: [
+                    {
+                      field: "Username",
+                      label: "Username:",
+                      validation: { required: true },
+                    },
+                    {
+                      field: "Email",
+                      label: "Email:",
+                      validation: { required: true, email: true },
+                    },
+                    {
+                      field: "Password",
+                      label: "Password:",
+                      validation: { required: true },
+                      hint: "Hint: enter alphanumeric characters only.",
+                      editor: function (container, options) {
+                        $(
+                          '<input type="password" id="Password" name="' +
+                            options.field +
+                            '" title="Password" required="required" autocomplete="off" aria-labelledby="Password-form-label" data-bind="value: Password" aria-describedby="Password-form-hint"/>'
+                        )
+                          .appendTo(container)
+                          .kendoTextBox();
+                      },
+                    },
+                    {
+                      field: "Birth",
+                      label: { text: "Date of birth:", optional: true },
+                    },
+                    {
+                      field: "Agree",
+                      label: "Agree to Terms:",
+                      validation: { required: true },
+                    },
+                  ],
+                },
+              ],
+              validateField: function (e) {
+                validationSuccess.html("");
+              },
+
+              buttonsTemplate: `<div class="k-form-buttons">
+                <button type="submit" class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-primary k-form-submit stacha-orange-button stacha-rounded-button stacha-button-font">Submit</button>
+                
+                <button type="reset" class="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base k-form-clear stacha-rounded-button stacha-button-font">Clear</button>`,
+
+              submit: function (e) {
+                e.preventDefault();
+                validationSuccess.html(
+                  "<div class='k-messagebox k-messagebox-success'>Form data is valid!</div>"
+                );
+              },
+              clear: function (ev) {
+                validationSuccess.html("");
+              },
+              // onload: function (ev) {
+              //   $(".k-form-submit").addClass("stacha-rounded-button");
+              // },
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

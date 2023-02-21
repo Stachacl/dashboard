@@ -15,6 +15,8 @@ $(document).ready(function() {
           }]
         },
         options: {
+          responsive: true,
+          // aspectRatio: 3/4,
           scales: {
             y: {
               beginAtZero: true

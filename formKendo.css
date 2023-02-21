@@ -1,0 +1,29 @@
+body {
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+.stacha-button-font {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.stacha-rounded-button {
+    border-radius: 300px;    
+}
+
+.stacha-orange-button,
+.stacha-orange-button:active,
+.stacha-orange-button:focus,
+.stacha-orange-button:hover {
+    background-color: #f78308;
+    border-color: #f78308;
+}
+
+.stacha-orange-button:hover {
+    opacity: .8;
+}
+
+.stacha-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
